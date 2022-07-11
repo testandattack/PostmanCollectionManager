@@ -8,9 +8,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{68F87C72-6668-47A9-9659-F149D88C4410}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{FE84962E-194D-4916-96E1-A3A2776D0D07}"
-	ProjectSection(SolutionItems) = preProject
-		readme.md = readme.md
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

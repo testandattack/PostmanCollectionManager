@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Description>a collection of DTO objects that represent an exported Postman Collection.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/testandattack/PostmanCollectionManager</PackageProjectUrl>
+    <Authors>Geoff Gray</Authors>
   </PropertyGroup>
 
   <ItemGroup>
