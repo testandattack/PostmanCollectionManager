@@ -109,3 +109,39 @@ public System.Collections.Generic.List<PostmanManager.Models.Variable> Variables
 
 #### Property Value
 [System.Collections.Generic.List&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[Variable](Variable.md 'PostmanManager.Models.Variable')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')
+### Methods
+
+<a name='PostmanManager.PostmanCollection.LoadCollection(string)'></a>
+
+## PostmanCollection.LoadCollection(string) Method
+
+Loads an exported Postman Collection json file into the [PostmanCollection](PostmanCollection.md 'PostmanManager.PostmanCollection') object.
+
+```csharp
+public static PostmanManager.PostmanCollection LoadCollection(string fileName);
+```
+#### Parameters
+
+<a name='PostmanManager.PostmanCollection.LoadCollection(string).fileName'></a>
+
+`fileName` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+
+#### Returns
+[PostmanCollection](PostmanCollection.md 'PostmanManager.PostmanCollection')
+
+<a name='PostmanManager.PostmanCollection.SaveCollection(PostmanManager.PostmanCollection,string)'></a>
+
+## PostmanCollection.SaveCollection(PostmanCollection, string) Method
+
+```csharp
+public static void SaveCollection(PostmanManager.PostmanCollection source, string fileName);
+```
+#### Parameters
+
+<a name='PostmanManager.PostmanCollection.SaveCollection(PostmanManager.PostmanCollection,string).source'></a>
+
+`source` [PostmanCollection](PostmanCollection.md 'PostmanManager.PostmanCollection')
+
+<a name='PostmanManager.PostmanCollection.SaveCollection(PostmanManager.PostmanCollection,string).fileName'></a>
+
+`fileName` [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')

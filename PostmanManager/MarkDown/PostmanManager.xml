@@ -877,5 +877,19 @@
             Set of configurations used to alter the usual behavior of sending the request.
             </summary>
         </member>
+        <member name="M:PostmanManager.PostmanCollection.LoadCollection(System.String)">
+            <summary>
+            Loads an exported Postman Collection json file into the <see cref="T:PostmanManager.PostmanCollection"/> object.
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PostmanManager.PostmanCollection.SaveCollection(PostmanManager.PostmanCollection,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="source"></param>
+            <param name="fileName"></param>
+        </member>
     </members>
 </doc>

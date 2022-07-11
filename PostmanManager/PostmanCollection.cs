@@ -3,6 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using PostmanManager.Models;
+using System.IO;
+using Serilog;
+using GTC.Extensions;
 
 namespace PostmanManager
 {
@@ -65,5 +68,57 @@ namespace PostmanManager
         /// </summary>
         [JsonProperty("protocolProfileBehavior")]
         public object ProtocolProfileBehavior { get; set; }
+
+        /// <summary>
+        /// Loads an exported Postman Collection json file into the <see cref="PostmanCollection"/> object.
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        public static PostmanCollection LoadCollection(string fileName)
+        {
+            List<string> errors = new List<string>();
+            PostmanCollection source;
+            using (StreamReader sr = new StreamReader(fileName))
+            {
+                var settings = new JsonSerializerSettings
+                {
+                    Error = delegate (object sender, Newtonsoft.Json.Serialization.ErrorEventArgs args)
+                    {
+                        errors.Add(args.ErrorContext.Error.Message);
+                        args.ErrorContext.Handled = true;
+                    },
+                    TypeNameHandling = TypeNameHandling.Objects
+                };
+                source = JsonConvert.DeserializeObject<PostmanCollection>(sr.ReadToEnd(), settings);
+            }
+            Log.Error($"The following Deserialization errors were detected:\r\n{errors.ToString("\r\n")}");
+            return source;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="fileName"></param>
+        public static void SaveCollection(PostmanCollection source, string fileName)
+        {
+            List<string> errors = new List<string>();
+
+            using (StreamWriter sw = new StreamWriter(fileName, false))
+            {
+                var settings = new JsonSerializerSettings
+                {
+                    Error = delegate (object sender, Newtonsoft.Json.Serialization.ErrorEventArgs args)
+                    {
+                        errors.Add(args.ErrorContext.Error.Message);
+                        args.ErrorContext.Handled = true;
+                    },
+                    TypeNameHandling = TypeNameHandling.Objects,
+                    NullValueHandling = NullValueHandling.Ignore
+                };
+                sw.Write(JsonConvert.SerializeObject(source, Formatting.Indented));
+            }
+            Log.Error($"The following Serialization errors were detected:\r\n{errors.ToString("\r\n")}");
+        }
     }
 }

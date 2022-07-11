@@ -15,6 +15,8 @@ P:PostmanManager.PostmanCollection.Events|PostmanCollection.md#PostmanManager.Po
 P:PostmanManager.PostmanCollection.Variables|PostmanCollection.md#PostmanManager.PostmanCollection.Variables|Variables
 P:PostmanManager.PostmanCollection.Auth|PostmanCollection.md#PostmanManager.PostmanCollection.Auth|Auth
 P:PostmanManager.PostmanCollection.ProtocolProfileBehavior|PostmanCollection.md#PostmanManager.PostmanCollection.ProtocolProfileBehavior|ProtocolProfileBehavior
+M:PostmanManager.PostmanCollection.LoadCollection(System.String)|PostmanCollection.md#PostmanManager.PostmanCollection.LoadCollection(string)|LoadCollection(string)
+M:PostmanManager.PostmanCollection.SaveCollection(PostmanManager.PostmanCollection,System.String)|PostmanCollection.md#PostmanManager.PostmanCollection.SaveCollection(PostmanManager.PostmanCollection,string)|SaveCollection(PostmanCollection, string)
 T:PostmanManager.PostmanCollection|PostmanCollection.md|PostmanCollection
 P:PostmanManager.Models.Auth.ApiKey|Auth.md#PostmanManager.Models.Auth.ApiKey|ApiKey
 P:PostmanManager.Models.Auth.AwsV4|Auth.md#PostmanManager.Models.Auth.AwsV4|AwsV4
