@@ -1,0 +1,10 @@
+{
+  "LinksBaseUrl": "https://github.com/testandattack/PostmanCollection/blob/master/PostmanManager/MarkDown/",
+  "LinksOutputFilePath": "MarkDown\\PostmanManager.txt",
+  "GeneratedAccessModifiers": "Public,Protected,ProtectedInternal",
+  "Markdown.IgnoreLineBreak": true,
+  "Markdown.TableOfContentsModes": "IncludeKind,IncludeSummary",
+  "GeneratedPages": "Assembly,Types",
+  "AssemblyPageName": "PostmanManager",
+  "FileNameFactory": "Name"
+}
