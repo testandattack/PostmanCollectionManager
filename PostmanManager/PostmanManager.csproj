@@ -7,6 +7,10 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/testandattack/PostmanCollectionManager</PackageProjectUrl>
     <Authors>Geoff Gray</Authors>
+    <AssemblyVersion>1.0.0.10</AssemblyVersion>
+    <FileVersion>1.0.0.10</FileVersion>
+    <Version>1.0.0</Version>
+    <PackageReleaseNotes>Contains several bug fixes WRT Json Serializing null values</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
