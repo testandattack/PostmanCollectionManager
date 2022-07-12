@@ -59,6 +59,11 @@
             Represents authentication helpers provided by Postman
             </summary>
         </member>
+        <member name="P:PostmanManager.Models.Auth.NoAuth">
+            <summary>
+            No Description Given
+            </summary>
+        </member>
         <member name="P:PostmanManager.Models.Auth.ApiKey">
             <summary>
             The attributes for API Key Authentication.
@@ -101,7 +106,7 @@
         </member>
         <member name="P:PostmanManager.Models.Auth.OAuth1">
             <summary>
-            "The attributes for [OAuth2](https://oauth.net/1/)
+            "The attributes for [OAuth1](https://oauth.net/1/)
             </summary>
         </member>
         <member name="P:PostmanManager.Models.Auth.OAuth2">
@@ -173,7 +178,7 @@
         </member>
         <member name="P:PostmanManager.Models.Body.Disabled">
             <summary>
-            When set to true, prevents this form data entity from being sent.
+            (Default = false) When set to true, prevents this form data entity from being sent.
             </summary>
         </member>
         <member name="T:PostmanManager.Models.Certificate">
@@ -302,7 +307,7 @@
         </member>
         <member name="P:PostmanManager.Models.Event.Disabled">
             <summary>
-            Indicates whether the event is disabled. If absent, the event is assumed to be enabled.
+            (Default = false) Indicates whether the event is disabled. If absent, the event is assumed to be enabled.
             </summary>
         </member>
         <member name="P:PostmanManager.Models.FileUploadObject.Source">
@@ -346,6 +351,11 @@
             A description of the header
             </summary>
         </member>
+        <member name="T:PostmanManager.Models.Header">
+            <summary>
+            Represents a single HTTP Header
+            </summary>
+        </member>
         <member name="P:PostmanManager.Models.Header.Key">
             <summary>
             This holds the LHS of the HTTP Header, e.g ``Content-Type`` or ``X-Custom-Header``
@@ -358,7 +368,7 @@
         </member>
         <member name="P:PostmanManager.Models.Header.Disabled">
             <summary>
-            If set to true, the current header will not be sent with requests.
+            (Default = false) If set to true, the current header will not be sent with requests.
             </summary>
         </member>
         <member name="P:PostmanManager.Models.Header.Description">
@@ -442,6 +452,25 @@
             Set of configurations used to alter the usual behavior of sending the request.
             </summary>
         </member>
+        <member name="P:PostmanManager.Models.Item.Request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PostmanManager.Models.Item.Responses">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PostmanManager.Models.ItemCollection">
+            <summary>
+            An empty abstract class used to allow multiple concrete objects to exist at the same level.
+            </summary>
+            <remarks>
+            The <see cref="T:PostmanManager.Models.Item"/> and <see cref="T:PostmanManager.Models.ItemGroup"/> classes are 
+            both derived from this class.
+            </remarks>
+        </member>
         <member name="T:PostmanManager.Models.ItemGroup">
             <summary>
             Items are entities which contain an actual HTTP request, and sample responses attached to it.
@@ -514,7 +543,7 @@
         </member>
         <member name="P:PostmanManager.Models.Proxy.Match">
             <summary>
-            The Url match for which the proxy config is defined.
+            The Url match for which the proxy config is defined. Default Value = "http+https://*/*"
             </summary>
         </member>
         <member name="P:PostmanManager.Models.Proxy.Host">
@@ -529,12 +558,12 @@
         </member>
         <member name="P:PostmanManager.Models.Proxy.Tunnel">
             <summary>
-            The tunneling details for the proxy config
+            (Default = false) The tunneling details for the proxy config
             </summary>
         </member>
         <member name="P:PostmanManager.Models.Proxy.Disabled">
             <summary>
-            When set to true, ignores this proxy configuration entity
+            (Default = false)When set to true, ignores this proxy configuration entity
             </summary>
         </member>
         <member name="T:PostmanManager.Models.Request">
@@ -594,6 +623,13 @@
         <member name="T:PostmanManager.Models.Response">
             <summary>
             A response represents an HTTP response.
+            </summary>
+        </member>
+        <member name="P:PostmanManager.Models.Response.PostmanPreviewLanguage">
+            <summary>
+            NOTE: This item is not listed in the PostmanCollectionSchema, but it does appear
+            in exported collections. I am guessing as to its full nature, but it appears
+            to work properly.
             </summary>
         </member>
         <member name="P:PostmanManager.Models.Response.Id">
@@ -689,12 +725,20 @@
         </member>
         <member name="T:PostmanManager.Models.Url">
             <summary>
-            If object, contains the complete broken-down URL for this request. If string, contains the literal request URL.
+            If object, contains the complete broken-down URL for this request. If string, 
+            contains the literal request URL.
+            </summary>
+        </member>
+        <member name="P:PostmanManager.Models.Url.urlIsInStringFormat">
+            <summary>
+            This property is added to the object to help with JsonSerialization and 
+            Postman import/export routines. It is not serialized.
             </summary>
         </member>
         <member name="P:PostmanManager.Models.Url.Raw">
             <summary>
-            The string representation of the request URL, including the protocol, host, path, hash, query parameter(s) and path variable(s).
+            The string representation of the request URL, including the protocol, 
+            host, path, hash, query parameter(s) and path variable(s).
             </summary>
         </member>
         <member name="P:PostmanManager.Models.Url.Protocol">
@@ -709,22 +753,34 @@
         </member>
         <member name="P:PostmanManager.Models.Url.Path">
             <summary>
-            The complete path of the current url, broken down into segments. A segment could be a string, or a path variable.
+            The complete path of the current url, broken down into segments. A segment 
+            could be a string, or a path variable.
             </summary>
         </member>
         <member name="P:PostmanManager.Models.Url.Port">
             <summary>
-            The port number present in this URL. An empty value implies 80/443 depending on whether the protocol field contains http/https.
+            The port number present in this URL. An empty value implies 80/443 depending 
+            on whether the protocol field contains http/https.
             </summary>
         </member>
         <member name="P:PostmanManager.Models.Url.QueryParams">
             <summary>
-            An array of QueryParams, which is basically the query string part of the URL, parsed into separate variables
+            An array of QueryParams, which is basically the query string part of the 
+            URL, parsed into separate variables
             </summary>
         </member>
         <member name="P:PostmanManager.Models.Url.Hash">
             <summary>
-            Contains the URL fragment (if any). Usually this is not transmitted over the network, but it could be useful to store this in some cases.
+            Contains the URL fragment (if any). Usually this is not transmitted over the 
+            network, but it could be useful to store this in some cases.
+            </summary>
+        </member>
+        <member name="P:PostmanManager.Models.Url.Variables">
+            <summary>
+            Collection variables allow you to define a set of variables, 
+            that are a *part of the collection*, as opposed to environments, 
+            which are separate entities.\n*Note: Collection variables must not 
+            contain any sensitive information.*
             </summary>
         </member>
         <member name="P:PostmanManager.Models.UrlEncodedParameter.Key">
@@ -780,7 +836,7 @@
         </member>
         <member name="P:PostmanManager.Models.Variable.System">
             <summary>
-            When set to true, indicates that this variable has been set by Postman
+            (Default = false) When set to true, indicates that this variable has been set by Postman
             </summary>
         </member>
         <member name="P:PostmanManager.Models.Variable.Disabled">

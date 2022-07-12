@@ -34,7 +34,7 @@ namespace PostmanManager
                 }
                 else
                 {
-                    Console.WriteLine(" PostmanRequest_JsonConverter object token");
+                    Console.WriteLine("PostmanRequest_JsonConverter object token");
                     var result = (JToken)serializer.Deserialize(reader);
                     
                     Request request = new Request();

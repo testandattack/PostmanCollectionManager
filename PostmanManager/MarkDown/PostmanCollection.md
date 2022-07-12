@@ -79,7 +79,7 @@ public System.Collections.Generic.List<PostmanManager.Models.ItemCollection> Ite
 ```
 
 #### Property Value
-[System.Collections.Generic.List&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[PostmanManager.Models.ItemCollection](https://docs.microsoft.com/en-us/dotnet/api/PostmanManager.Models.ItemCollection 'PostmanManager.Models.ItemCollection')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')
+[System.Collections.Generic.List&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[ItemCollection](ItemCollection.md 'PostmanManager.Models.ItemCollection')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')
 
 <a name='PostmanManager.PostmanCollection.ProtocolProfileBehavior'></a>
 

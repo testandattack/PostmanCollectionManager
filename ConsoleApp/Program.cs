@@ -26,6 +26,8 @@ namespace ConsoleApp
 
 
             PostmanCollection collection = PostmanCollection.LoadCollection("Swagger Petstore.postman_collection.json");
+            collection.Info.Name = "Modified Petstore Collection";
+            collection.Info.PostmanId = Guid.NewGuid().ToString();
             PostmanCollection.SaveCollection(collection, "Swagger Petstore.postman_collection_Edited.json");
         }
     }

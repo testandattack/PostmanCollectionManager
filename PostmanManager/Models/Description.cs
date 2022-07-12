@@ -5,7 +5,7 @@ using System.Text;
 
 namespace PostmanManager.Models
 {
-    [JsonObject(Title = "description", ItemNullValueHandling = NullValueHandling.Ignore)]
+    [JsonObject(Title = "description")]
     [JsonConverter(typeof(PostmanDescription_JsonConverter))]
     public class Description
     {
@@ -13,7 +13,7 @@ namespace PostmanManager.Models
         /// <summary>
         /// The content of the description goes here, as a raw string.
         /// </summary>
-        [JsonProperty("content")]
+        [JsonProperty("content", NullValueHandling = NullValueHandling.Ignore)]
         public string Content { get; set; }
 
         /// <summary>
@@ -22,13 +22,13 @@ namespace PostmanManager.Models
         /// used to correctly render the description when generating 
         /// documentation, or in the Postman app.
         /// </summary>
-        [JsonProperty("type")]
+        [JsonProperty("type", NullValueHandling = NullValueHandling.Ignore)]
         public string Type { get; set; }
 
         /// <summary>
         /// Description can have versions associated with it, which should be put in this property.
         /// </summary>
-        [JsonProperty("version")]
+        [JsonProperty("version", NullValueHandling = NullValueHandling.Ignore)]
         public Version Version { get; set; }
     }
 }

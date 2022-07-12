@@ -18,6 +18,7 @@ P:PostmanManager.PostmanCollection.ProtocolProfileBehavior|PostmanCollection.md#
 M:PostmanManager.PostmanCollection.LoadCollection(System.String)|PostmanCollection.md#PostmanManager.PostmanCollection.LoadCollection(string)|LoadCollection(string)
 M:PostmanManager.PostmanCollection.SaveCollection(PostmanManager.PostmanCollection,System.String)|PostmanCollection.md#PostmanManager.PostmanCollection.SaveCollection(PostmanManager.PostmanCollection,string)|SaveCollection(PostmanCollection, string)
 T:PostmanManager.PostmanCollection|PostmanCollection.md|PostmanCollection
+P:PostmanManager.Models.Auth.NoAuth|Auth.md#PostmanManager.Models.Auth.NoAuth|NoAuth
 P:PostmanManager.Models.Auth.ApiKey|Auth.md#PostmanManager.Models.Auth.ApiKey|ApiKey
 P:PostmanManager.Models.Auth.AwsV4|Auth.md#PostmanManager.Models.Auth.AwsV4|AwsV4
 P:PostmanManager.Models.Auth.Basic|Auth.md#PostmanManager.Models.Auth.Basic|Basic
@@ -96,7 +97,10 @@ P:PostmanManager.Models.Item.Description|Item.md#PostmanManager.Models.Item.Desc
 P:PostmanManager.Models.Item.Variables|Item.md#PostmanManager.Models.Item.Variables|Variables
 P:PostmanManager.Models.Item.Event|Item.md#PostmanManager.Models.Item.Event|Event
 P:PostmanManager.Models.Item.ProtocolProfileBehavior|Item.md#PostmanManager.Models.Item.ProtocolProfileBehavior|ProtocolProfileBehavior
+P:PostmanManager.Models.Item.Request|Item.md#PostmanManager.Models.Item.Request|Request
+P:PostmanManager.Models.Item.Responses|Item.md#PostmanManager.Models.Item.Responses|Responses
 T:PostmanManager.Models.Item|Item.md|Item
+T:PostmanManager.Models.ItemCollection|ItemCollection.md|ItemCollection
 P:PostmanManager.Models.ItemGroup.Name|ItemGroup.md#PostmanManager.Models.ItemGroup.Name|Name
 P:PostmanManager.Models.ItemGroup.Description|ItemGroup.md#PostmanManager.Models.ItemGroup.Description|Description
 P:PostmanManager.Models.ItemGroup.Variables|ItemGroup.md#PostmanManager.Models.ItemGroup.Variables|Variables
@@ -125,6 +129,7 @@ P:PostmanManager.Models.Request.Description|Request.md#PostmanManager.Models.Req
 P:PostmanManager.Models.Request.Headers|Request.md#PostmanManager.Models.Request.Headers|Headers
 P:PostmanManager.Models.Request.Body|Request.md#PostmanManager.Models.Request.Body|Body
 T:PostmanManager.Models.Request|Request.md|Request
+P:PostmanManager.Models.Response.PostmanPreviewLanguage|Response.md#PostmanManager.Models.Response.PostmanPreviewLanguage|PostmanPreviewLanguage
 P:PostmanManager.Models.Response.Id|Response.md#PostmanManager.Models.Response.Id|Id
 P:PostmanManager.Models.Response.OriginalRequest|Response.md#PostmanManager.Models.Response.OriginalRequest|OriginalRequest
 P:PostmanManager.Models.Response.ResponseTime|Response.md#PostmanManager.Models.Response.ResponseTime|ResponseTime
@@ -142,6 +147,7 @@ P:PostmanManager.Models.Script.Url|Script.md#PostmanManager.Models.Script.Url|Ur
 P:PostmanManager.Models.Script.Name|Script.md#PostmanManager.Models.Script.Name|Name
 T:PostmanManager.Models.Script|Script.md|Script
 T:PostmanManager.Models.StringOrNumber|StringOrNumber.md|StringOrNumber
+P:PostmanManager.Models.Url.urlIsInStringFormat|Url.md#PostmanManager.Models.Url.urlIsInStringFormat|urlIsInStringFormat
 P:PostmanManager.Models.Url.Raw|Url.md#PostmanManager.Models.Url.Raw|Raw
 P:PostmanManager.Models.Url.Protocol|Url.md#PostmanManager.Models.Url.Protocol|Protocol
 P:PostmanManager.Models.Url.Host|Url.md#PostmanManager.Models.Url.Host|Host
@@ -149,6 +155,7 @@ P:PostmanManager.Models.Url.Path|Url.md#PostmanManager.Models.Url.Path|Path
 P:PostmanManager.Models.Url.Port|Url.md#PostmanManager.Models.Url.Port|Port
 P:PostmanManager.Models.Url.QueryParams|Url.md#PostmanManager.Models.Url.QueryParams|QueryParams
 P:PostmanManager.Models.Url.Hash|Url.md#PostmanManager.Models.Url.Hash|Hash
+P:PostmanManager.Models.Url.Variables|Url.md#PostmanManager.Models.Url.Variables|Variables
 T:PostmanManager.Models.Url|Url.md|Url
 P:PostmanManager.Models.UrlEncodedParameter.Key|UrlEncodedParameter.md#PostmanManager.Models.UrlEncodedParameter.Key|Key
 P:PostmanManager.Models.UrlEncodedParameter.Value|UrlEncodedParameter.md#PostmanManager.Models.UrlEncodedParameter.Value|Value

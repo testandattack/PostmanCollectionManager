@@ -73,7 +73,8 @@ namespace PostmanManager
             if (header.Value != null)
                 obj.Add("value", header.Value);
 
-            obj.Add("disabled", header.Disabled);
+            if (header.Disabled != null)
+                obj.Add("disabled", header.Disabled);
 
             if (header.Description != null)
                 obj.Add("description", JToken.FromObject(header.Description));

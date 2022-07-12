@@ -28,7 +28,7 @@ namespace PostmanManager
         /// <summary>
         /// Detailed description of the info block
         /// </summary>
-        [JsonProperty("info")]
+        [JsonProperty("info"), JsonRequired]
         public Info Info { get; set; }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace PostmanManager
         /// API endpoint. Each Item has one request and may have 
         /// multiple API responses associated with it.
         /// </summary>
-        [JsonProperty("item")]
+        [JsonProperty("item"), JsonRequired]
         public List<ItemCollection> Items { get; set; }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace PostmanManager
         /// occur. These scripts are stored here, and can be referenced in the 
         /// collection by their ID.
         /// </summary>
-        [JsonProperty("event")]
+        [JsonProperty("event", NullValueHandling = NullValueHandling.Ignore)]
         public List<Event> Events { get; set; }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace PostmanManager
         /// which are separate entities.\n*Note: Collection variables must 
         /// not contain any sensitive information.*
         /// </summary>
-        [JsonProperty("variable")]
+        [JsonProperty("variable", NullValueHandling = NullValueHandling.Ignore)]
         public List<Variable> Variables { get; set; }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace PostmanManager
         /// <summary>
         /// Set of configurations used to alter the usual behavior of sending the request.
         /// </summary>
-        [JsonProperty("protocolProfileBehavior")]
+        [JsonProperty("protocolProfileBehavior", NullValueHandling = NullValueHandling.Ignore)]
         public object ProtocolProfileBehavior { get; set; }
 
         /// <summary>

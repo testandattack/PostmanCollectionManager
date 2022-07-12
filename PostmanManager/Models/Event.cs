@@ -12,7 +12,7 @@ namespace PostmanManager.Models
         /// <summary>
         /// A unique identifier for the enclosing event.
         /// </summary>
-        [JsonProperty("id")]
+        [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
         public string Id { get; set; }
 
         /// <summary>
@@ -24,13 +24,13 @@ namespace PostmanManager.Models
         /// <summary>
         /// "A script is a snippet of Javascript code that can be used to to perform setup or teardown operations on a particular response.
         /// </summary>
-        [JsonProperty("script")]
+        [JsonProperty("script", NullValueHandling = NullValueHandling.Ignore)]
         public Script Script { get; set; }
 
         /// <summary>
-        /// Indicates whether the event is disabled. If absent, the event is assumed to be enabled.
+        /// (Default = false) Indicates whether the event is disabled. If absent, the event is assumed to be enabled.
         /// </summary>
-        [JsonProperty("disabled")]
-        public string Disabled { get; set; }
+        [JsonProperty("disabled", NullValueHandling = NullValueHandling.Ignore)]
+        public bool? Disabled { get; set; }
     }
 }

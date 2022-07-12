@@ -13,37 +13,33 @@ namespace PostmanManager.Models
     public class Proxy
     {
         /// <summary>
-        /// The Url match for which the proxy config is defined.
+        /// The Url match for which the proxy config is defined. Default Value = "http+https://*/*"
         /// </summary>
-        [JsonProperty("match")]
-        [DefaultValue("http+https://*/*")]
+        [JsonProperty("match", NullValueHandling = NullValueHandling.Ignore)]
         public string Match { get; set; }
 
         /// <summary>
         /// The proxy server host
         /// </summary>
-        [JsonProperty("host")]
+        [JsonProperty("host", NullValueHandling = NullValueHandling.Ignore)]
         public string Host { get; set; }
 
         /// <summary>
         /// The proxy server port
         /// </summary>
-        [JsonProperty("port")]
-        [DefaultValue(8080)]
-        public int Port { get; set; }
+        [JsonProperty("port", NullValueHandling = NullValueHandling.Ignore)]
+        public int? Port { get; set; }
 
         /// <summary>
-        /// The tunneling details for the proxy config
+        /// (Default = false) The tunneling details for the proxy config
         /// </summary>
-        [JsonProperty("tunnel")]
-        [DefaultValue(false)]
-        public bool Tunnel { get; set; }
+        [JsonProperty("tunnel", NullValueHandling = NullValueHandling.Ignore)]
+        public bool? Tunnel { get; set; }
 
         /// <summary>
-        /// When set to true, ignores this proxy configuration entity
+        /// (Default = false)When set to true, ignores this proxy configuration entity
         /// </summary>
-        [JsonProperty("disabled")]
-        [DefaultValue(false)]
-        public bool Disabled { get; set; }
+        [JsonProperty("disabled", NullValueHandling = NullValueHandling.Ignore)]
+        public bool? Disabled { get; set; }
     }
 }

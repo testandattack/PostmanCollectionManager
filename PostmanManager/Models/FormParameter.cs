@@ -28,32 +28,31 @@ namespace PostmanManager.Models
         /// </summary>
         [JsonConverter(typeof(StringOrStringArrayConverter))]
         [JsonProperty("src", NullValueHandling = NullValueHandling.Ignore)]
-        public string[] Src { get; set; }
+        public string[]? Src { get; set; }
         #endregion
 
 
         /// <summary>
         /// When set to true, prevents this form data entity from being sent.
         /// </summary>
-        [JsonProperty("disabled")]
-        [DefaultValue(false)]
-        public bool Disabled { get; set; }
+        [JsonProperty("disabled", NullValueHandling = NullValueHandling.Ignore)]
+        public bool? Disabled { get; set; }
 
 
-        [JsonProperty("type")]
+        [JsonProperty("type", NullValueHandling = NullValueHandling.Ignore)]
         [JsonConverter(typeof(StringEnumConverter))]
-        public FormParameterType_Enum Type { get; set; }
+        public FormParameterType_Enum? Type { get; set; }
 
         /// <summary>
         /// Override Content-Type header of this form data entity.
         /// </summary>
-        [JsonProperty("contentType")]
+        [JsonProperty("contentType", NullValueHandling = NullValueHandling.Ignore)]
         public string ContentType { get; set; }
 
         /// <summary>
         /// A description of the header
         /// </summary>
-        [JsonProperty("description")]
+        [JsonProperty("description", NullValueHandling = NullValueHandling.Ignore)]
         public Description Description { get; set; }
     }
 }

@@ -59,11 +59,11 @@ public System.Collections.Generic.List<object> Extensions { get; set; }
 True if the cookie is a host-only cookie. (i.e. a request's URL domain must exactly match the domain of the cookie).
 
 ```csharp
-public bool HostOnly { get; set; }
+public System.Nullable<bool> HostOnly { get; set; }
 ```
 
 #### Property Value
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+[System.Nullable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')
 
 <a name='PostmanManager.Models.Cookie.HttpOnly'></a>
 
@@ -72,11 +72,11 @@ public bool HostOnly { get; set; }
 Indicates if this cookie is HTTP Only. (if True, the cookie is inaccessible to client-side scripts)
 
 ```csharp
-public bool HttpOnly { get; set; }
+public System.Nullable<bool> HttpOnly { get; set; }
 ```
 
 #### Property Value
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+[System.Nullable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')
 
 <a name='PostmanManager.Models.Cookie.MaxAge'></a>
 
@@ -124,11 +124,11 @@ public string Path { get; set; }
 Indicates if the 'secure' flag is set on the Cookie, meaning that it is transmitted over secure connections only. (typically HTTPS)
 
 ```csharp
-public bool Secure { get; set; }
+public System.Nullable<bool> Secure { get; set; }
 ```
 
 #### Property Value
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+[System.Nullable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')
 
 <a name='PostmanManager.Models.Cookie.Session'></a>
 
@@ -137,11 +137,11 @@ public bool Secure { get; set; }
 True if the cookie is a session cookie.
 
 ```csharp
-public bool Session { get; set; }
+public System.Nullable<bool> Session { get; set; }
 ```
 
 #### Property Value
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+[System.Nullable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')
 
 <a name='PostmanManager.Models.Cookie.Value'></a>
 

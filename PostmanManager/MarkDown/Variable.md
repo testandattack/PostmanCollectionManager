@@ -31,11 +31,11 @@ public string Description { get; set; }
 No Description Given
 
 ```csharp
-public bool Disabled { get; set; }
+public System.Nullable<bool> Disabled { get; set; }
 ```
 
 #### Property Value
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+[System.Nullable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')
 
 <a name='PostmanManager.Models.Variable.Id'></a>
 
@@ -80,14 +80,14 @@ public string Name { get; set; }
 
 ## Variable.System Property
 
-When set to true, indicates that this variable has been set by Postman
+(Default = false) When set to true, indicates that this variable has been set by Postman
 
 ```csharp
-public bool System { get; set; }
+public System.Nullable<bool> System { get; set; }
 ```
 
 #### Property Value
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+[System.Nullable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')
 
 <a name='PostmanManager.Models.Variable.Type'></a>
 
@@ -96,11 +96,11 @@ public bool System { get; set; }
 A variable may have multiple types. This field specifies the type of the variable.
 
 ```csharp
-public PostmanManager.Models.ItemType_Enum Type { get; set; }
+public System.Nullable<PostmanManager.Models.ItemType_Enum> Type { get; set; }
 ```
 
 #### Property Value
-[PostmanManager.Models.ItemType_Enum](https://docs.microsoft.com/en-us/dotnet/api/PostmanManager.Models.ItemType_Enum 'PostmanManager.Models.ItemType_Enum')
+[System.Nullable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')[PostmanManager.Models.ItemType_Enum](https://docs.microsoft.com/en-us/dotnet/api/PostmanManager.Models.ItemType_Enum 'PostmanManager.Models.ItemType_Enum')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')
 
 <a name='PostmanManager.Models.Variable.Value'></a>
 

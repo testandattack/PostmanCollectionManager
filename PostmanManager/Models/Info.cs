@@ -16,7 +16,7 @@ namespace PostmanManager.Models
         /// allow you to easily identify this collection among a 
         /// bunch of other collections, as such outlining its usage or content.
         /// </summary>
-        [JsonProperty("name", Required = Required.Always)]
+        [JsonProperty("name"), JsonRequired]
         public string Name { get; set; }
 
         /// <summary>
@@ -28,19 +28,19 @@ namespace PostmanManager.Models
         /// different collection than it was originally.\n *Note: This 
         /// field exists for compatibility reasons with Collection Format V1.*
         /// </summary>
-        [JsonProperty("_postman_id")]
+        [JsonProperty("_postman_id", NullValueHandling = NullValueHandling.Ignore)]
         public string PostmanId { get; set; }
 
         /// <summary>
         /// No description given
         /// </summary>
-        [JsonProperty("description")]
+        [JsonProperty("description", NullValueHandling = NullValueHandling.Ignore)]
         public Description Description { get; set; }
 
         /// <summary>
         /// see the <see cref="Version"/> class for info.
         /// </summary>
-        [JsonProperty("version")]
+        [JsonProperty("version", NullValueHandling = NullValueHandling.Ignore)]
         public Version Version { get; set; }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace PostmanManager.Models
         /// that is used to validate this collection. 
         /// E.g: https://schema.getpostman.com/collection/v1
         /// </summary>
-        [JsonProperty("schema", Required = Required.Always)]
+        [JsonProperty("schema"), JsonRequired]
         public string Schema { get; set; }
 
     }

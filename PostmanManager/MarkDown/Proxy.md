@@ -17,14 +17,14 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 ## Proxy.Disabled Property
 
-When set to true, ignores this proxy configuration entity
+(Default = false)When set to true, ignores this proxy configuration entity
 
 ```csharp
-public bool Disabled { get; set; }
+public System.Nullable<bool> Disabled { get; set; }
 ```
 
 #### Property Value
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+[System.Nullable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')
 
 <a name='PostmanManager.Models.Proxy.Host'></a>
 
@@ -43,7 +43,7 @@ public string Host { get; set; }
 
 ## Proxy.Match Property
 
-The Url match for which the proxy config is defined.
+The Url match for which the proxy config is defined. Default Value = "http+https://*/*"
 
 ```csharp
 public string Match { get; set; }
@@ -59,21 +59,21 @@ public string Match { get; set; }
 The proxy server port
 
 ```csharp
-public int Port { get; set; }
+public System.Nullable<int> Port { get; set; }
 ```
 
 #### Property Value
-[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+[System.Nullable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')
 
 <a name='PostmanManager.Models.Proxy.Tunnel'></a>
 
 ## Proxy.Tunnel Property
 
-The tunneling details for the proxy config
+(Default = false) The tunneling details for the proxy config
 
 ```csharp
-public bool Tunnel { get; set; }
+public System.Nullable<bool> Tunnel { get; set; }
 ```
 
 #### Property Value
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+[System.Nullable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')

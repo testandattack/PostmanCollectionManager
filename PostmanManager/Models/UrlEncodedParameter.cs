@@ -17,20 +17,19 @@ namespace PostmanManager.Models
         /// <summary>
         /// No description given 
         /// </summary>
-        [JsonProperty("value")]
+        [JsonProperty("value", NullValueHandling = NullValueHandling.Ignore)]
         public string Value { get; set; }
 
         /// <summary>
         /// No description given 
         /// </summary>
-        [JsonProperty("disabled")]
-        [DefaultValue(false)]
-        public bool Disabled { get; set; }
+        [JsonProperty("disabled", NullValueHandling = NullValueHandling.Ignore)]
+        public bool? Disabled { get; set; }
 
         /// <summary>
         /// A description of the header
         /// </summary>
-        [JsonProperty("description")]
-        public string Description { get; set; }
+        [JsonProperty("description", NullValueHandling = NullValueHandling.Ignore)]
+        public Description Description { get; set; }
     }
 }

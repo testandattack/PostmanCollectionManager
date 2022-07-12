@@ -9,7 +9,7 @@ Items are entities which contain an actual HTTP request, and sample responses at
 public class ItemGroup : PostmanManager.Models.ItemCollection
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [PostmanManager.Models.ItemCollection](https://docs.microsoft.com/en-us/dotnet/api/PostmanManager.Models.ItemCollection 'PostmanManager.Models.ItemCollection') &#129106; ItemGroup
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [ItemCollection](ItemCollection.md 'PostmanManager.Models.ItemCollection') &#129106; ItemGroup
 ### Properties
 
 <a name='PostmanManager.Models.ItemGroup.Auth'></a>
@@ -61,7 +61,7 @@ public System.Collections.Generic.List<PostmanManager.Models.ItemCollection> Ite
 ```
 
 #### Property Value
-[System.Collections.Generic.List&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[PostmanManager.Models.ItemCollection](https://docs.microsoft.com/en-us/dotnet/api/PostmanManager.Models.ItemCollection 'PostmanManager.Models.ItemCollection')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')
+[System.Collections.Generic.List&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[ItemCollection](ItemCollection.md 'PostmanManager.Models.ItemCollection')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')
 
 <a name='PostmanManager.Models.ItemGroup.Name'></a>
 

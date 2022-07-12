@@ -4,6 +4,7 @@ using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using PostmanManager.Models;
+using Serilog;
 
 namespace PostmanManager
 {
@@ -35,7 +36,7 @@ namespace PostmanManager
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                Log.Error(ex.ToString());
             }
             return null;
         }
@@ -44,10 +45,16 @@ namespace PostmanManager
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            var obj = new JObject();
-            obj.Add(nameof(value), new JArray(value));
-
-            obj.WriteTo(writer);
+            try
+            {
+                var strItem = (value as string[]);
+                JToken t = JToken.FromObject(strItem);
+                t.WriteTo(writer);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.ToString());
+            }
         }
     }
 }

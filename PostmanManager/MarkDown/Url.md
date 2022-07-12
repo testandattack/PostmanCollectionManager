@@ -3,7 +3,8 @@
 
 ## Url Class
 
-If object, contains the complete broken-down URL for this request. If string, contains the literal request URL.
+If object, contains the complete broken-down URL for this request. If string, 
+contains the literal request URL.
 
 ```csharp
 public class Url
@@ -16,7 +17,8 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 ## Url.Hash Property
 
-Contains the URL fragment (if any). Usually this is not transmitted over the network, but it could be useful to store this in some cases.
+Contains the URL fragment (if any). Usually this is not transmitted over the 
+network, but it could be useful to store this in some cases.
 
 ```csharp
 public string Hash { get; set; }
@@ -32,7 +34,7 @@ public string Hash { get; set; }
 The host for the URL, E.g: api.yourdomain.com.
 
 ```csharp
-public string[] Host { get; set; }
+public string[]? Host { get; set; }
 ```
 
 #### Property Value
@@ -42,7 +44,8 @@ public string[] Host { get; set; }
 
 ## Url.Path Property
 
-The complete path of the current url, broken down into segments. A segment could be a string, or a path variable.
+The complete path of the current url, broken down into segments. A segment 
+could be a string, or a path variable.
 
 ```csharp
 public PostmanManager.Models.Path Path { get; set; }
@@ -55,7 +58,8 @@ public PostmanManager.Models.Path Path { get; set; }
 
 ## Url.Port Property
 
-The port number present in this URL. An empty value implies 80/443 depending on whether the protocol field contains http/https.
+The port number present in this URL. An empty value implies 80/443 depending 
+on whether the protocol field contains http/https.
 
 ```csharp
 public string Port { get; set; }
@@ -81,7 +85,8 @@ public string Protocol { get; set; }
 
 ## Url.QueryParams Property
 
-An array of QueryParams, which is basically the query string part of the URL, parsed into separate variables
+An array of QueryParams, which is basically the query string part of the 
+URL, parsed into separate variables
 
 ```csharp
 public System.Collections.Generic.List<PostmanManager.Models.Variable> QueryParams { get; set; }
@@ -94,7 +99,8 @@ public System.Collections.Generic.List<PostmanManager.Models.Variable> QueryPara
 
 ## Url.Raw Property
 
-The string representation of the request URL, including the protocol, host, path, hash, query parameter(s) and path variable(s).
+The string representation of the request URL, including the protocol, 
+host, path, hash, query parameter(s) and path variable(s).
 
 ```csharp
 public string Raw { get; set; }
@@ -102,3 +108,33 @@ public string Raw { get; set; }
 
 #### Property Value
 [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+
+<a name='PostmanManager.Models.Url.urlIsInStringFormat'></a>
+
+## Url.urlIsInStringFormat Property
+
+This property is added to the object to help with JsonSerialization and 
+Postman import/export routines. It is not serialized.
+
+```csharp
+public bool urlIsInStringFormat { get; set; }
+```
+
+#### Property Value
+[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+
+<a name='PostmanManager.Models.Url.Variables'></a>
+
+## Url.Variables Property
+
+Collection variables allow you to define a set of variables, 
+that are a *part of the collection*, as opposed to environments, 
+which are separate entities.\n*Note: Collection variables must not 
+contain any sensitive information.*
+
+```csharp
+public System.Collections.Generic.List<PostmanManager.Models.Variable> Variables { get; set; }
+```
+
+#### Property Value
+[System.Collections.Generic.List&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[Variable](Variable.md 'PostmanManager.Models.Variable')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')

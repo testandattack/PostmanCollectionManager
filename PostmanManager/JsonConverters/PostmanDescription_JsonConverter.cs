@@ -62,17 +62,26 @@ namespace PostmanManager
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            var obj = new JObject();
+
             var description = (value as Description);
+            if (description.Type == "text" && description.Version == null)
+            {
+                JToken t = JToken.FromObject(description.Content);
+                t.WriteTo(writer);
+            }
+            else
+            {
+                var obj = new JObject();
 
-            if(description.Content != null)
-                obj.Add("content", description.Content);
-            if(description.Type != null)
-                obj.Add("type", description.Type);
-            if (description.Version != null)
-                obj.Add("version", JToken.FromObject(description.Version));
+                if (description.Content != null)
+                    obj.Add("content", description.Content);
+                if (description.Type != null)
+                    obj.Add("type", description.Type);
+                if (description.Version != null)
+                    obj.Add("version", JToken.FromObject(description.Version));
 
-            obj.WriteTo(writer);
+                obj.WriteTo(writer);
+            }
         }
     }
 }

@@ -14,7 +14,7 @@ namespace PostmanManager.Models
         /// <summary>
         /// A human readable identifier for the current item.
         /// </summary>
-        [JsonProperty("name")]
+        [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         public string Name { get; set; }
 
         /// <summary>

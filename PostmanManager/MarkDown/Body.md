@@ -16,14 +16,14 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 ## Body.Disabled Property
 
-When set to true, prevents this form data entity from being sent.
+(Default = false) When set to true, prevents this form data entity from being sent.
 
 ```csharp
-public bool Disabled { get; set; }
+public System.Nullable<bool> Disabled { get; set; }
 ```
 
 #### Property Value
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+[System.Nullable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')
 
 <a name='PostmanManager.Models.Body.File'></a>
 

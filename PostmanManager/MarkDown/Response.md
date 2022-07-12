@@ -32,11 +32,11 @@ public string Body { get; set; }
 The numerical response code, example: 200, 201, 404, etc.
 
 ```csharp
-public int Code { get; set; }
+public System.Nullable<int> Code { get; set; }
 ```
 
 #### Property Value
-[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+[System.Nullable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')
 
 <a name='PostmanManager.Models.Response.Cookies'></a>
 
@@ -90,6 +90,21 @@ public PostmanManager.Models.Request OriginalRequest { get; set; }
 
 #### Property Value
 [Request](Request.md 'PostmanManager.Models.Request')
+
+<a name='PostmanManager.Models.Response.PostmanPreviewLanguage'></a>
+
+## Response.PostmanPreviewLanguage Property
+
+NOTE: This item is not listed in the PostmanCollectionSchema, but it does appear
+in exported collections. I am guessing as to its full nature, but it appears
+to work properly.
+
+```csharp
+public string PostmanPreviewLanguage { get; set; }
+```
+
+#### Property Value
+[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 
 <a name='PostmanManager.Models.Response.ResponseTime'></a>
 

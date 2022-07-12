@@ -3,6 +3,8 @@
 
 ## Header Class
 
+Represents a single HTTP Header
+
 ```csharp
 public class Header
 ```
@@ -27,14 +29,14 @@ public PostmanManager.Models.Description Description { get; set; }
 
 ## Header.Disabled Property
 
-If set to true, the current header will not be sent with requests.
+(Default = false) If set to true, the current header will not be sent with requests.
 
 ```csharp
-public bool Disabled { get; set; }
+public System.Nullable<bool> Disabled { get; set; }
 ```
 
 #### Property Value
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+[System.Nullable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')
 
 <a name='PostmanManager.Models.Header.Key'></a>
 

@@ -3,7 +3,7 @@
 
 ## PostmanItem_JsonConverter Class
 
-Custom Json Converter to handle [PostmanManager.Models.ItemCollection](https://docs.microsoft.com/en-us/dotnet/api/PostmanManager.Models.ItemCollection 'PostmanManager.Models.ItemCollection') objects from Postman
+Custom Json Converter to handle [ItemCollection](ItemCollection.md 'PostmanManager.Models.ItemCollection') objects from Postman
 
 ```csharp
 public class PostmanItem_JsonConverter : Newtonsoft.Json.JsonConverter

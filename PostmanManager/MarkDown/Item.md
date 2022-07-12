@@ -11,7 +11,7 @@ can be achived using 'Folders'. A folder just is an ordered set of requests.
 public class Item : PostmanManager.Models.ItemCollection
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [PostmanManager.Models.ItemCollection](https://docs.microsoft.com/en-us/dotnet/api/PostmanManager.Models.ItemCollection 'PostmanManager.Models.ItemCollection') &#129106; Item
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [ItemCollection](ItemCollection.md 'PostmanManager.Models.ItemCollection') &#129106; Item
 ### Properties
 
 <a name='PostmanManager.Models.Item.Description'></a>
@@ -63,6 +63,28 @@ public object ProtocolProfileBehavior { get; set; }
 
 #### Property Value
 [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')
+
+<a name='PostmanManager.Models.Item.Request'></a>
+
+## Item.Request Property
+
+```csharp
+public PostmanManager.Models.Request Request { get; set; }
+```
+
+#### Property Value
+[Request](Request.md 'PostmanManager.Models.Request')
+
+<a name='PostmanManager.Models.Item.Responses'></a>
+
+## Item.Responses Property
+
+```csharp
+public System.Collections.Generic.List<PostmanManager.Models.Response> Responses { get; set; }
+```
+
+#### Property Value
+[System.Collections.Generic.List&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[Response](Response.md 'PostmanManager.Models.Response')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')
 
 <a name='PostmanManager.Models.Item.Variables'></a>
 

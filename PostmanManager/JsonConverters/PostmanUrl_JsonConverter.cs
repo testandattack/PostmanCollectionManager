@@ -30,13 +30,42 @@ namespace PostmanManager
                     Console.WriteLine(" PostmanUrl_JsonConverter string token");
                     Url url = new Url();
                     url.Raw = reader.Value.ToString();
+                    url.urlIsInStringFormat = true;
                     return url;
                 }
                 else
                 {
-                    Console.WriteLine(" PostmanUrl_JsonConverter object token");
-                    return new Url();
-                    //return serializer.Deserialize<Url>(reader);
+                    Console.WriteLine("PostmanUrl_JsonConverter object token");
+                    var result = (JToken)serializer.Deserialize(reader);
+
+                    Url url = new Url();
+                    url.urlIsInStringFormat = false;
+
+                    if (result["raw"] != null)
+                        url.Raw = result["raw"].ToString();
+
+                    if (result["protocol"] != null)
+                        url.Protocol = result["protocol"].ToString();
+
+                    if (result["host"] != null)
+                        url.Host = result["host"].ToObject<string[]>();
+
+                    if (result["path"] != null)
+                        url.Path = result["path"].ToObject<Path>();
+
+                    if (result["port"] != null)
+                        url.Port = result["port"].ToString();
+
+                    if (result["query"] != null)
+                        url.QueryParams = result["query"].ToObject<List<Variable>>();
+
+                    if (result["hash"] != null)
+                        url.Hash = result["hash"].ToString();
+
+                    if (result["variable"] != null)
+                        url.Variables = result["variable"].ToObject<List<Variable>>();
+
+                    return url;
                 }
             }
             catch (Exception ex)
@@ -50,34 +79,43 @@ namespace PostmanManager
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            var obj = new JObject();
             var url = (value as Url);
 
-            if (url.Raw != null)
-                obj.Add("raw", url.Raw);
+            if (url.urlIsInStringFormat)
+            {
+                JToken t = JToken.FromObject(url.Raw);
+                t.WriteTo(writer);
+            }
+            else
+            {
+                var obj = new JObject();
 
-            if (url.Protocol != null)
-                obj.Add("raw", url.Protocol);
+                if (url.Raw != null)
+                    obj.Add("raw", url.Raw);
 
-            if (url.Host != null)
-                obj.Add("host", JToken.FromObject(url.Path));
+                if (url.Protocol != null)
+                    obj.Add("raw", url.Protocol);
 
-            if (url.Path != null)
-                obj.Add("path", JToken.FromObject(url.Path));
+                if (url.Host != null)
+                    obj.Add("host", JToken.FromObject(url.Host));
 
-            if (url.Port != null)
-                obj.Add("port", url.Port);
+                if (url.Path != null)
+                    obj.Add("path", JToken.FromObject(url.Path));
 
-            if (url.QueryParams != null)
-                obj.Add("query", JToken.FromObject(url.QueryParams));
+                if (url.Port != null)
+                    obj.Add("port", url.Port);
 
-            if (url.Hash != null)
-                obj.Add("hash", url.Hash);
+                if (url.QueryParams != null)
+                    obj.Add("query", JToken.FromObject(url.QueryParams));
 
-            if (url.Variables != null)
-                obj.Add("variable", JToken.FromObject(url.Variables));
-            
-            obj.WriteTo(writer);
+                if (url.Hash != null)
+                    obj.Add("hash", url.Hash);
+
+                if (url.Variables != null)
+                    obj.Add("variable", JToken.FromObject(url.Variables));
+
+                obj.WriteTo(writer);
+            }
         }
     }
 }

@@ -25,44 +25,44 @@ namespace PostmanManager.Models
         /// If object, contains the complete broken-down URL for this request. If 
         /// string, contains the literal request URL.
         /// </summary>
-        [JsonProperty("url")]
+        [JsonProperty("url", NullValueHandling = NullValueHandling.Ignore)]
         public Url Url { get; set; }
 
         /// <summary>
         /// Represents authentication helpers provided by Postman
         /// </summary>
-        [JsonProperty("auth")]
+        [JsonProperty("auth", NullValueHandling = NullValueHandling.Ignore)]
         public Auth Auth { get; set; }
 
         /// <summary>
         /// Using the Proxy, you can configure your custom proxy into the postman for 
         /// particular url match
         /// </summary>
-        [JsonProperty("proxy")]
+        [JsonProperty("proxy", NullValueHandling = NullValueHandling.Ignore)]
         public Proxy Proxy { get; set; }
 
         /// <summary>
         /// A representation of an ssl certificate
         /// </summary>
-        [JsonProperty("certificate")]
+        [JsonProperty("certificate", NullValueHandling = NullValueHandling.Ignore)]
         public Certificate Certificate { get; set; }
 
         /// <summary>
         /// The Standard HTTP method associated with this request.
         /// </summary>
-        [JsonProperty("method")]
+        [JsonProperty("method", NullValueHandling = NullValueHandling.Ignore)]
         public string Method { get; set; }
 
         /// <summary>
         /// The description of this request.
         /// </summary>
-        [JsonProperty("description")]
+        [JsonProperty("description", NullValueHandling = NullValueHandling.Ignore)]
         public Description Description { get; set; }
 
         /// <summary>
         /// A representation for a list of headers.
         /// </summary>
-        [JsonProperty("header")]
+        [JsonProperty("header", NullValueHandling = NullValueHandling.Ignore)]
         public List<Header> Headers { get; set; }
 
         /// <summary>

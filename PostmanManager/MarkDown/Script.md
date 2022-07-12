@@ -23,7 +23,7 @@ separate makes it possible to easily track
 changes made to scripts.
 
 ```csharp
-public string[] Exec { get; set; }
+public string[]? Exec { get; set; }
 ```
 
 #### Property Value

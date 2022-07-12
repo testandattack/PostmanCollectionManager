@@ -16,19 +16,19 @@ namespace PostmanManager.Models
         /// <summary>
         /// No Description Given
         /// </summary>
-        [JsonProperty("key")]
+        [JsonProperty("key"), JsonRequired]
         public string Key { get; set; }
 
         /// <summary>
         /// No Description Given
         /// </summary>
-        [JsonProperty("value")]
+        [JsonProperty("value", NullValueHandling = NullValueHandling.Ignore)]
         public object Value { get; set; }
 
         /// <summary>
         /// No Description Given
         /// </summary>
-        [JsonProperty("type")]
+        [JsonProperty("type", NullValueHandling = NullValueHandling.Ignore)]
         public string Type { get; set; }
     }
 }

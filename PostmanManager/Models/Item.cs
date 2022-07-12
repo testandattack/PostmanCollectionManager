@@ -32,7 +32,7 @@ namespace PostmanManager.Models
         /// lot of time. Variables can be defined, and referenced 
         /// to from any part of a request.
         /// </summary>
-        [JsonProperty("variable")]
+        [JsonProperty("variable", NullValueHandling = NullValueHandling.Ignore)]
         public List<Variable> Variables { get; set; }
 
         /// <summary>
@@ -47,12 +47,18 @@ namespace PostmanManager.Models
         [JsonProperty("protocolProfileBehavior", NullValueHandling = NullValueHandling.Ignore)]
         public object ProtocolProfileBehavior { get; set; }
 
-        [JsonProperty("id")]
+        [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
         public string Id { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [JsonProperty("request"), JsonRequired]
         public Request Request { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [JsonProperty("response", NullValueHandling = NullValueHandling.Ignore)]
         public List<Response> Responses { get; set; }
     }

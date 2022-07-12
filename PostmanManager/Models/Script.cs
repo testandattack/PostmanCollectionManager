@@ -16,13 +16,13 @@ namespace PostmanManager.Models
         /// A unique, user defined identifier that can  
         /// be used to refer to this script from requests.
         /// </summary>
-        [JsonProperty("id")]
+        [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
         public string Id { get; set; }
 
         /// <summary>
         /// Type of the script. E.g: 'text/javascript'
         /// </summary>
-        [JsonProperty("type")]
+        [JsonProperty("type", NullValueHandling = NullValueHandling.Ignore)]
         public string Type { get; set; }
 
         /// <summary>
@@ -31,20 +31,20 @@ namespace PostmanManager.Models
         /// separate makes it possible to easily track 
         /// changes made to scripts.
         /// </summary>
-        [JsonProperty("exec")]
+        [JsonProperty("exec", NullValueHandling = NullValueHandling.Ignore)]
         [JsonConverter(typeof(StringOrStringArrayConverter))]
-        public string[] Exec { get; set; }
+        public string[]? Exec { get; set; }
 
         /// <summary>
         /// No Description Given
         /// </summary>
-        [JsonProperty("url")]
+        [JsonProperty("url", NullValueHandling = NullValueHandling.Ignore)]
         public Url Url { get; set; }
 
         /// <summary>
         /// script name
         /// </summary>
-        [JsonProperty("name")]
+        [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         public string Name { get; set; }
     }
 }

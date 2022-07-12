@@ -14,14 +14,14 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 ## Event.Disabled Property
 
-Indicates whether the event is disabled. If absent, the event is assumed to be enabled.
+(Default = false) Indicates whether the event is disabled. If absent, the event is assumed to be enabled.
 
 ```csharp
-public string Disabled { get; set; }
+public System.Nullable<bool> Disabled { get; set; }
 ```
 
 #### Property Value
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+[System.Nullable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')
 
 <a name='PostmanManager.Models.Event.Id'></a>
 

@@ -17,11 +17,11 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 A description of the header
 
 ```csharp
-public string Description { get; set; }
+public PostmanManager.Models.Description Description { get; set; }
 ```
 
 #### Property Value
-[System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
+[Description](Description.md 'PostmanManager.Models.Description')
 
 <a name='PostmanManager.Models.UrlEncodedParameter.Disabled'></a>
 
@@ -30,11 +30,11 @@ public string Description { get; set; }
 No description given
 
 ```csharp
-public bool Disabled { get; set; }
+public System.Nullable<bool> Disabled { get; set; }
 ```
 
 #### Property Value
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+[System.Nullable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Nullable-1 'System.Nullable`1')
 
 <a name='PostmanManager.Models.UrlEncodedParameter.Key'></a>
 

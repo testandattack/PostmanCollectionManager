@@ -12,18 +12,25 @@ namespace PostmanManager.Models
     [JsonObject(Title = "response")]
     public class Response
     {
+        /// <summary>
+        /// NOTE: This item is not listed in the PostmanCollectionSchema, but it does appear
+        /// in exported collections. I am guessing as to its full nature, but it appears
+        /// to work properly.
+        /// </summary>
+        [JsonProperty("_postman_previewlanguage", NullValueHandling = NullValueHandling.Ignore)]
+        public string PostmanPreviewLanguage { get; set; }
 
         /// <summary>
         /// A unique, user defined identifier that can  be used to 
         /// refer to this response from requests.
         /// </summary>
-        [JsonProperty("name")]
+        [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         public string Id { get; set; }
 
         /// <summary>
         /// <see cref="Request"/>
         /// </summary>
-        [JsonProperty("originalRequest")]
+        [JsonProperty("originalRequest", NullValueHandling = NullValueHandling.Ignore)]
         public Request OriginalRequest { get; set; }
 
         /// <summary>
@@ -31,7 +38,7 @@ namespace PostmanManager.Models
         /// unit is milliseconds. If the response is manually created, 
         /// this can be set to `null`.
         /// </summary>
-        [JsonProperty("responseTime")]
+        [JsonProperty("responseTime", NullValueHandling = NullValueHandling.Ignore)]
         [JsonConverter(typeof(StringOrNumberConverter))]
         public StringOrNumber ResponseTime { get; set; }
 
@@ -46,13 +53,13 @@ namespace PostmanManager.Models
         /// same is true for a Postman request. This field is an array 
         /// containing all the headers.
         /// </summary>
-        [JsonProperty("header")]
+        [JsonProperty("header", NullValueHandling = NullValueHandling.Ignore)]
         public List<Header> Headers { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
-        [JsonProperty("cookie")]
+        [JsonProperty("cookie", NullValueHandling = NullValueHandling.Ignore)]
         public List<Cookie> Cookies { get; set; }
 
         /// <summary>
@@ -64,13 +71,13 @@ namespace PostmanManager.Models
         /// <summary>
         /// The response status, e.g: '200 OK'
         /// </summary>
-        [JsonProperty("status")]
+        [JsonProperty("status", NullValueHandling = NullValueHandling.Ignore)]
         public string Status { get; set; }
 
         /// <summary>
         /// The numerical response code, example: 200, 201, 404, etc.
         /// </summary>
-        [JsonProperty("code")]
-        public Int32 Code { get; set; }
+        [JsonProperty("code", NullValueHandling = NullValueHandling.Ignore)]
+        public Int32? Code { get; set; }
     }
 }

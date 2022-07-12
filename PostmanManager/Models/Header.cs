@@ -6,6 +6,9 @@ using System.Text;
 
 namespace PostmanManager.Models
 {
+    /// <summary>
+    /// Represents a single HTTP Header
+    /// </summary>
     [JsonObject(Title = "header")]
     [JsonConverter(typeof(PostmanHeader_JsonConverter))]
     public class Header
@@ -23,16 +26,15 @@ namespace PostmanManager.Models
         public string Value { get; set; }
 
         /// <summary>
-        /// If set to true, the current header will not be sent with requests.
+        /// (Default = false) If set to true, the current header will not be sent with requests.
         /// </summary>
-        [JsonProperty("disabled")]
-        [DefaultValue(false)]
-        public bool Disabled { get; set; }
+        [JsonProperty("disabled", NullValueHandling = NullValueHandling.Ignore)]
+        public bool? Disabled { get; set; }
 
         /// <summary>
         /// A description of the header
         /// </summary>
-        [JsonProperty("description")]
+        [JsonProperty("description", NullValueHandling = NullValueHandling.Ignore)]
         public Description Description { get; set; }
     }
 }

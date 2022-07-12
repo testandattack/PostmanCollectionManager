@@ -103,6 +103,19 @@ public System.Collections.Generic.List<PostmanManager.Models.AuthAttribute> Hawk
 #### Property Value
 [System.Collections.Generic.List&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')[AuthAttribute](AuthAttribute.md 'PostmanManager.Models.AuthAttribute')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.List-1 'System.Collections.Generic.List`1')
 
+<a name='PostmanManager.Models.Auth.NoAuth'></a>
+
+## Auth.NoAuth Property
+
+No Description Given
+
+```csharp
+public object NoAuth { get; set; }
+```
+
+#### Property Value
+[System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object')
+
 <a name='PostmanManager.Models.Auth.Ntlm'></a>
 
 ## Auth.Ntlm Property
@@ -120,7 +133,7 @@ public System.Collections.Generic.List<PostmanManager.Models.AuthAttribute> Ntlm
 
 ## Auth.OAuth1 Property
 
-"The attributes for [OAuth2](https://oauth.net/1/)
+"The attributes for [OAuth1](https://oauth.net/1/)
 
 ```csharp
 public System.Collections.Generic.List<PostmanManager.Models.AuthAttribute> OAuth1 { get; set; }

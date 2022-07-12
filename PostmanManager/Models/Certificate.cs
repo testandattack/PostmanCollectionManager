@@ -14,31 +14,31 @@ namespace PostmanManager.Models
         /// <summary>
         /// A name for the certificate for user reference
         /// </summary>
-        [JsonProperty("name")]
+        [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         public string Name { get; set; }
 
         /// <summary>
         /// A list of Url match pattern strings, to identify Urls this certificate can be used for.
         /// </summary>
-        [JsonProperty("matches")]
+        [JsonProperty("matches", NullValueHandling = NullValueHandling.Ignore)]
         public string[] Matches { get; set; }
 
         /// <summary>
         /// An object containing path to file containing private key, on the file system
         /// </summary>
-        [JsonProperty("key")]
+        [JsonProperty("key", NullValueHandling = NullValueHandling.Ignore)]
         public object Key { get; set; }
 
         /// <summary>
         /// An object containing path to file certificate, on the file system
         /// </summary>
-        [JsonProperty("cert")]
+        [JsonProperty("cert", NullValueHandling = NullValueHandling.Ignore)]
         public object Cert { get; set; }
 
         /// <summary>
         /// The passphrase for the certificate
         /// </summary>
-        [JsonProperty("passphrase")]
+        [JsonProperty("passphrase", NullValueHandling = NullValueHandling.Ignore)]
         public string PassPhrase { get; set; }
     }
 }
